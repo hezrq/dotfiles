@@ -19,7 +19,8 @@ if type "yum" > /dev/null 2>&1; then
     yum install sudo -y
   fi
   sudo yum groupinstall 'Development Tools' -y
-  sudo yum install curl file git install which ruby -y
+  sudo yum install curl git m4 ruby bzip2-devel curl-devel expat-devel ncurses-devel zlib-devel openssl-devel which -y
+  sudo yum install texinfo -y
   sudo yum install libxcrypt-compat -y
 fi
 
@@ -45,4 +46,3 @@ fi
 
 cd $DOTPATH
 /bin/bash ./homebrew/install.sh
-/bin/bash ./node/install.sh
