@@ -22,6 +22,7 @@ if type "yum" > /dev/null 2>&1; then
   sudo yum install curl git m4 ruby bzip2-devel curl-devel expat-devel ncurses-devel zlib-devel openssl-devel which -y
   sudo yum install texinfo -y
   sudo yum install libxcrypt-compat -y
+  sudo yum install util-linux-user -y
 fi
 
 if type "apk" > /dev/null 2>&1; then
@@ -30,7 +31,7 @@ if type "apk" > /dev/null 2>&1; then
   else
     apk add sudo
   fi
-  sudo apk add bash build-base curl file git gzip libc6-compat ncurses ruby ruby-dbm ruby-etc ruby-irb ruby-json ruby-bigdecimal
+  sudo apk add bash build-base curl file git gzip libc6-compat ncurses ruby ruby-dbm ruby-etc ruby-irb ruby-json ruby-bigdecimal shadow
 fi
 
 if type "git" > /dev/null 2>&1; then
