@@ -5,6 +5,8 @@ DOTURL=https://github.com/mtiyz/dotfiles.git
 
 if type "apt" > /dev/null 2>&1; then
   if type "sudo" > /dev/null 2>&1; then
+    ;;
+  else
     apt install sudo
   fi
   sudo apt install build-essential curl file git
@@ -12,6 +14,8 @@ fi
 
 if type "yum" > /dev/null 2>&1; then
   if type "sudo" > /dev/null 2>&1; then
+    ;;
+  else
     yum install sudo
   fi
   sudo yum groupinstall 'Development Tools'
@@ -21,6 +25,8 @@ fi
 
 if type "apk" > /dev/null 2>&1; then
   if type "sudo" > /dev/null 2>&1; then
+    ;;
+  else
     apk add sudo
   fi
   sudo apk add bash build-base curl file git gzip libc6-compat ncurses ruby ruby-dbm ruby-etc ruby-irb ruby-json

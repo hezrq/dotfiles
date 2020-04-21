@@ -1,5 +1,7 @@
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+
 brew install n
 
 sudo n lts
 
-npm i -g yarn
+sudo npm i -g yarn
