@@ -8,7 +8,7 @@ brew install fish
 
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 
-`which fish` fisher add rafaelrinaldi/pure
+fish -c $"fisher add rafaelrinaldi/pure"
 
 rm ~/.config/fish/config.fish
 cat $DOTPATH/fish/config.fish > ~/.config/fish/config.fish
