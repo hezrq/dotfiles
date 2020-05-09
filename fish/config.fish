@@ -19,6 +19,9 @@ set fish_color_command f5e751
 set fish_color_host f5e751
 set fish_color_param f5e751
 
+# Dot command
+alias dot='$DOTPATH/app/dot.fish'
+
 ## Command alias
 alias ls='exa'
 alias g='git'
