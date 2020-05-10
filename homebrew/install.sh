@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ test -d $HOME/.linuxbrew ]; then
+if [ -d $HOME/.linuxbrew ]; then
   :
 else
   git clone https://github.com/Homebrew/brew ~/.linuxbrew/Homebrew
