@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! `test -f $HOME/.profile` ]; then
+if [ $(test -d $HOME/.linuxbrew) ]; then
   git clone https://github.com/Homebrew/brew ~/.linuxbrew/Homebrew
   mkdir ~/.linuxbrew/bin
   ln -sfv ~/.linuxbrew/Homebrew/bin/brew ~/.linuxbrew/bin
