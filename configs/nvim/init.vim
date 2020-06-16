@@ -44,6 +44,10 @@ nnoremap O :<C-u>call append(expand('.'), '')<Cr>j
 
 set number
 
+set ambiwidth=double
+
+set updatetime=100
+
 set scrolloff=10
 
 set autoindent
