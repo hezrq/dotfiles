@@ -18,12 +18,13 @@ set -x PATH $DENO_INSTALL/bin $PATH
 source $HOME/.cargo/env
 
 ## Prompt color
-set pure_color_primary 60c79f
-set pure_color_success 78d32e
+set red c47081
+set pure_color_primary eb36eb
+set pure_color_success 36cdeb
 set pure_color_warning d37e2e
-set fish_color_command f5e751
-set fish_color_host f5e751
-set fish_color_param f5e751
+set fish_color_command ababab
+set fish_color_param ababab
+set fish_color_error c47081
 
 # Dot command
 alias dot="$DOTPATH/app/dot.fish"
@@ -34,5 +35,5 @@ alias g="git"
 
 ## cd + ls
 function cd
-    builtin cd $argv; and ls
+  builtin cd $argv; and ls
 end
