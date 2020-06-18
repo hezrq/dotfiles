@@ -10,6 +10,7 @@ if type "apt" > /dev/null 2>&1; then
     apt install sudo -y
   fi
   sudo apt install build-essential curl file git python3-pip -y
+  sudo apt remove tmux -y
 fi
 
 if type "yum" > /dev/null 2>&1; then
@@ -25,6 +26,7 @@ if type "yum" > /dev/null 2>&1; then
   sudo yum install util-linux-user -y
   sudo yum install perl-ExtUtils-MakeMaker -y
   sudo yum install python-pip -y
+  sudo yum remove tmux -y
 fi
 
 if type "pacman" > /dev/null 2>&1; then
@@ -43,6 +45,7 @@ if type "pacman" > /dev/null 2>&1; then
   sudo pacman -S make --noconfirm
   sudo pacman -S which --noconfirm
   sudo pacman -S python-pip --noconfirm
+  sudo pacman -Rs tmux --noconfirm
 fi
 
 if type "git" > /dev/null 2>&1; then
