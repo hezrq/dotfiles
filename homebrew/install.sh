@@ -32,6 +32,7 @@ brew install ytop
 brew install ghq
 brew install fzf
 brew install anyenv
+brew install starship
 
 if [ ! "`sudo fd`" ]; then
   touch ~/sudoers.tmp ~/sudoers.bak
