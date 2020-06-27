@@ -16,7 +16,9 @@ set -x PATH $HOME/.linuxbrew/sbin $PATH
 set -x PATH /usr/local/opt/ruby/bin $PATH
 set -x PATH $DENO_INSTALL/bin $PATH
 
-source $HOME/.cargo/env
+if type "cargo" > /dev/null 2>&1
+  source $HOME/.cargo/env
+end
 
 ## Prompt color
 set red c47081
