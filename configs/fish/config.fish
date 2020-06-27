@@ -34,5 +34,8 @@ alias dot="$DOTPATH/app/dot.fish"
 alias ls="exa"
 alias g="git"
 
+# anyenv
+status --is-interactive; and source (anyenv init -|psub)
+
 # Starship
 starship init fish | source

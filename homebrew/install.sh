@@ -31,6 +31,7 @@ brew tap cjbassi/ytop
 brew install ytop
 brew install ghq
 brew install fzf
+brew install anyenv
 
 if [ ! "`sudo fd`" ]; then
   touch ~/sudoers.tmp ~/sudoers.bak

@@ -63,3 +63,4 @@ cd $DOTPATH
 /bin/bash ./homebrew/install.sh
 /bin/bash ./fish/install.sh
 /bin/bash ./tmux/install.sh
+/bin/bash ./anyenv/install.sh
