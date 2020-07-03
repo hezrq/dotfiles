@@ -13,6 +13,7 @@ set DENO_INSTALL $HOME/.deno
 set -x GPG_TTY (tty)
 set -x PATH $HOME/.linuxbrew/bin $PATH
 set -x PATH $HOME/.linuxbrew/sbin $PATH
+set -x PATH $HOME/.local/bin $PATH
 set -x PATH /usr/local/opt/ruby/bin $PATH
 set -x PATH $DENO_INSTALL/bin $PATH
 
@@ -42,3 +43,15 @@ status --is-interactive; and source (anyenv init -|psub)
 
 # Starship
 starship init fish | source
+
+function fish_greeting
+  echo '    _______      __'
+  echo '   / ____(_)____/ /_'
+  echo '  / /_  / / ___/ __ \\'
+  echo ' / __/ / (__  ) / / /'
+  echo '/_/   /_/____/_/ /_/'
+  echo ''
+  echo (date)
+  echo (fish --version)
+end
+
