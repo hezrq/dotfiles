@@ -4,15 +4,15 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/home/noroz/.cache/dein//repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein//repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/home/noroz/.cache/dein/')
-  call dein#begin('/home/noroz/.cache/dein/')
+if dein#load_state('~/.cache/dein/')
+  call dein#begin('~/.cache/dein/')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/home/noroz/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   call dein#load_toml('~/.config/nvim/plugins/dein.toml', {'lazy': 0})
   " Add or remove your plugins here like this:

@@ -10,7 +10,7 @@ end
 set DENO_INSTALL $HOME/.deno
 
 ## Pipenv
-set PIPENV_VENV_IN_PROJECT 1
+set -x PIPENV_VENV_IN_PROJECT 1
 
 ## Environment variable
 set -x GPG_TTY (tty)
@@ -19,6 +19,7 @@ set -x PATH $HOME/.linuxbrew/sbin $PATH
 set -x PATH $HOME/.local/bin $PATH
 set -x PATH /usr/local/opt/ruby/bin $PATH
 set -x PATH $DENO_INSTALL/bin $PATH
+set -x PATH $HOME/esp/xtensa-esp32-elf/bin $PATH
 
 if test -f $HOME/.cargo/env
   source $HOME/.cargo/env
