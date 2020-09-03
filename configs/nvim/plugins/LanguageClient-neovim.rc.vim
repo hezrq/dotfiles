@@ -15,4 +15,5 @@ let g:LanguageClient_serverCommands = {
   \       server.runlinter = true;
   \       run(server);
   \ '],
+  \ 'typescript': ['pyls'],
 \ }

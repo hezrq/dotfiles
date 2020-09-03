@@ -30,6 +30,10 @@ build = ':UpdateRemotePlugins'
 hook_add = 'source ~/.config/nvim/plugins/deoplete.rc.vim'
 
 [[plugins]]
+repo = 'elzr/vim-json'
+hook_add = 'source ~/.config/nvim/plugins/vim-json.rc.vim'
+
+[[plugins]]
 repo = 'junegunn/fzf'
 
 [[plugins]]

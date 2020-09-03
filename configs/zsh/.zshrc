@@ -11,6 +11,19 @@ if [ -f $HOME/.cargo/env ]; then
   source $HOME/.cargo/env
 fi
 
+mkdir -p /tmp/$USER-zsh-completions/
+if hash rustup 2>/dev/null; then
+    rustup completions zsh > /tmp/$USER-zsh-completions/_rustup
+fi
+
+fpath=(
+    /tmp/$USER-zsh-completions/
+    $fpath)
+
+if hash rustc 2>/dev/null; then
+    fpath=($(rustc --print sysroot)/share/zsh/site-functions $fpath)
+fi
+
 ## Command alias
 alias ls="exa"
 alias g="git"
@@ -26,7 +39,7 @@ function ghq-fzf() {
 }
 
 zle -N ghq-fzf
-bindkey '^]' ghq-fzf
+bindkey '^g' ghq-fzf
 
 # anyenv
 eval "$(anyenv init -)"
@@ -65,3 +78,6 @@ zinit light zdharma/fast-syntax-highlighting
 zinit light zdharma/history-search-multi-word
 zinit light rupa/z
 
+if [[ ! -n $TMUX ]]; then
+  tm
+fi

@@ -62,10 +62,10 @@ bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+j move left
@@ -186,7 +186,7 @@ bar {
 exec --no-startup-id fcitx
 
 # force floating for all new windows
-for_window [class="[.]*"] floating enable
+for_window [class="pavucontrol"] floating enable
 
 bindsym $mod+Left workspace prev
 bindsym $mod+Right workspace next
