@@ -19,15 +19,20 @@ repo = 'tpope/vim-fugitive'
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-build = 'bash install.sh'
-hook_add = 'source ~/.config/nvim/plugins/LanguageClient-neovim.rc.vim'
+repo = 'prabirshrestha/vim-lsp'
+hook_add = 'source ~/.config/nvim/plugins/vim-lsp.rc.vim'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+hook_add = 'source ~/.config/nvim/plugins/vim-lsp-settings.rc.vim'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 build = ':UpdateRemotePlugins'
 hook_add = 'source ~/.config/nvim/plugins/deoplete.rc.vim'
+
+[[plugins]]
+repo = 'lighttiger2505/deoplete-vim-lsp'
 
 [[plugins]]
 repo = 'elzr/vim-json'
