@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/hezrq/repos/github.com/41b1r30/webapp/src/stories'
+let g:netrw_dirhist_2='/home/hezrq/dotfiles/nvim'
+let g:netrw_dirhist_1='/home/hezrq/test_esp32/src/main.c'

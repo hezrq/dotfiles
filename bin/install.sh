@@ -66,6 +66,6 @@ if [ ! -d $HOME/.config/ ]; then
   mkdir $HOME/.config
 fi
 
-/bin/bash $DOTPATH/bin/link.sh $DOTPATH/configs/.gitconfig ~/.gitconfig
-/bin/bash $DOTPATH/bin/link.sh $DOTPATH/configs/alacritty/ ~/.config/
-/bin/bash $DOTPATH/bin/link.sh $DOTPATH/configs/i3/ ~/.config/
+/bin/bash $DOTPATH/bin/link.sh $DOTPATH/config/.gitconfig ~/.gitconfig
+/bin/bash $DOTPATH/bin/link.sh $DOTPATH/config/alacritty/ ~/.config/
+/bin/bash $DOTPATH/bin/link.sh $DOTPATH/config/i3/ ~/.config/

@@ -1,4 +1,4 @@
-#!/usr/bin/env fish
+#!/bin/bash
 
 echo 'Installing Neovim...'
 brew install nvim --HEAD
@@ -7,10 +7,10 @@ pip3 install pynvim
 echo 'Installing dein...'
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/.cache/dein
-rm ./install.sh
+rm ./installer.sh
 
-echo 'Installing Neovim configs...'
-if test -d ~/.config/nvim
+echo 'Installing Neovim config...'
+if [ -d ~/.config/nvim ]; then
   rm -r ~/.config/nvim
-end
-ln -s $DOTPATH/configs/nvim/ ~/.config/
+fi
+ln -sf $DOTPATH/config/nvim/ ~/.config/

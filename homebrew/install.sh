@@ -21,7 +21,7 @@ export PATH="$HOME/.linuxbrew/bin:$PATH"
 
 echo 'Installing tools...'
 
-brew bundle --file '~/dotfiles/configs/Brewfile'
+brew bundle --file '~/dotfiles/config/Brewfile'
 
 if [ ! "`sudo fd`" ]; then
   touch ~/sudoers.tmp ~/sudoers.bak
