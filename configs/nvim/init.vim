@@ -65,4 +65,5 @@ set clipboard=unnamed
 
 autocmd BufNewFile,BufRead *.jl set filetype=julia
 autocmd BufNewFile,BufRead *.sh set filetype=bash
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 " End Personal Settings

@@ -59,6 +59,12 @@ repo = 'Yggdroot/indentLine'
 hook_add = 'source ~/.config/nvim/plugins/indentLine.rc.vim'
 
 [[plugins]]
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'peitalin/vim-jsx-typescript'
+
+[[plugins]]
 repo = 'dag/vim-fish'
 
 [[plugins]]
