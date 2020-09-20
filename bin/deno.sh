@@ -1,4 +1,4 @@
-#!/usr/bin/env fish
+#!/bin/bash
 
 echo 'Installing Deno...'
 

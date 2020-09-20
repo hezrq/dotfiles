@@ -1,9 +1,5 @@
 #!/bin/bash
-DOTPATH=~/dotfiles DOTURL=https://github.com/norozic/dotfiles.git
-
-if type "apt" > /dev/null 2>&1; then
-  if type "sudo" > /dev/null 2>&1; then
-    :
+DOTPATH=~/dotfiles DOTURL=https://github.com/norozic/dotfiles.git if type "apt" > /dev/null 2>&1; then if type "sudo" > /dev/null 2>&1; then :
   else
     apt install sudo -y
   fi
@@ -58,9 +54,13 @@ else
 fi
 
 cd $DOTPATH
-/bin/bash ./homebrew/install.sh
-/bin/bash ./zsh/install.sh
-/bin/bash ./tmux/install.sh
+/bin/bash ./bin/homebrew.sh
+/bin/bash ./bin/zsh.sh
+/bin/bash ./bin/nvim.sh
+/bin/bash ./bin/deno.sh
+/bin/bash ./bin/rust.sh
+/bin/bash ./bin/git-credential-helper.sh
+/bin/bash ./bin/tmux.sh
 
 if [ ! -d $HOME/.config/ ]; then
   mkdir $HOME/.config
