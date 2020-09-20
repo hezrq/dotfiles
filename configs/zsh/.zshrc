@@ -26,8 +26,12 @@ fi
 
 ## Command alias
 alias ls="exa"
+alias vi="nvim"
 alias g="git"
 alias tm="tmux new-session \; source-file ~/.tmux.session.conf"
+
+# Use vim keybind
+bindkey -v
 
 function ghq-fzf() {
   local src=$(ghq list | fzf)
@@ -46,6 +50,15 @@ eval "$(anyenv init -)"
 
 # Starship
 eval "$(starship init zsh)"
+
+autoload bashcompinit
+bashcompinit
+source /home/hezrq/.linuxbrew/etc/bash_completion.d
+
+fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+
+autoload -U compinit
+compinit -u
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.config/zsh/.zinit/bin/zinit.zsh ]]; then
