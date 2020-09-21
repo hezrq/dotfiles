@@ -67,6 +67,7 @@ cd $DOTPATH
 /bin/bash ./bin/i3.sh
 /bin/bash ./bin/git-credential-helper.sh
 /bin/bash ./bin/tmux.sh
+/bin/bash ./bin/tig.sh
 
 if [ ! -d $HOME/.config/ ]; then
   mkdir $HOME/.config
