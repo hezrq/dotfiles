@@ -19,10 +19,10 @@ fi
 
 mkdir ~/.config/zsh/
 
-$DOTPATH/bin/link.sh $DOTPATH/config/zsh/.zshrc ~/.config/zsh/.zshrc
-$DOTPATH/bin/link.sh $DOTPATH/config/zsh/.zprofile ~/.config/zsh/.zprofile
-$DOTPATH/bin/link.sh $DOTPATH/config/zsh/.zshenv ~/.config/zsh/.zshenv
-$DOTPATH/bin/link.sh $DOTPATH/config/zsh/.zshenv ~/.zshenv
+$DOTPATH/bin/link.sh $DOTPATH/.config/zsh/.zshrc ~/.config/zsh/.zshrc
+$DOTPATH/bin/link.sh $DOTPATH/.config/zsh/.zprofile ~/.config/zsh/.zprofile
+$DOTPATH/bin/link.sh $DOTPATH/.config/zsh/.zshenv ~/.config/zsh/.zshenv
+$DOTPATH/bin/link.sh $DOTPATH/.config/zsh/.zshenv ~/.zshenv
 
 zsh -c "zinit self-update"
 

@@ -28,7 +28,7 @@ fi
 alias ls="exa"
 alias vi="nvim"
 alias g="git"
-alias tm="tmux new-session \; source-file ~/.tmux.session.conf"
+alias tm="tmux source ~/.tmux.session.conf"
 
 # Use vim keybind
 bindkey -v
@@ -95,5 +95,5 @@ zinit light zdharma/history-search-multi-word
 zinit light rupa/z
 
 if [[ ! -n $TMUX ]]; then
-  tm
+  tmux
 fi

@@ -62,6 +62,9 @@ cd $DOTPATH
 /bin/bash ./bin/nvim.sh
 /bin/bash ./bin/deno.sh
 /bin/bash ./bin/rust.sh
+/bin/bash ./bin/git.sh
+/bin/bash ./bin/alacritty.sh
+/bin/bash ./bin/i3.sh
 /bin/bash ./bin/git-credential-helper.sh
 /bin/bash ./bin/tmux.sh
 
@@ -69,6 +72,3 @@ if [ ! -d $HOME/.config/ ]; then
   mkdir $HOME/.config
 fi
 
-/bin/bash $DOTPATH/bin/link.sh $DOTPATH/config/.gitconfig ~/.gitconfig
-/bin/bash $DOTPATH/bin/link.sh $DOTPATH/config/alacritty/ ~/.config/
-/bin/bash $DOTPATH/bin/link.sh $DOTPATH/config/i3/ ~/.config/

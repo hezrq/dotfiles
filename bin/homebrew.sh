@@ -2,6 +2,8 @@
 
 sudo cat /dev/null
 
+DOTPATH=$HOME/dotfiles
+
 if [ -d $HOME/.linuxbrew ]; then
   :
 else
@@ -20,8 +22,9 @@ fi
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 
 echo 'Installing tools...'
-
-brew bundle --file '~/dotfiles/config/Brewfile'
+$DOTPATH/bin/link.sh $DOTPATH/.Brewfile $HOME/.Brewfile
+$DOTPATH/bin/link.sh $DOTPATH/.Brewfile.lock.json $HOME/.Brewfile.lock.json
+brew bundle --global
 
 if [ ! "`sudo fd`" ]; then
   touch ~/sudoers.tmp ~/sudoers.bak

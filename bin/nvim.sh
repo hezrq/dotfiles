@@ -1,4 +1,5 @@
 #!/bin/bash
+DOTPATH=~/dotfiles
 
 echo 'Installing Neovim...'
 brew install nvim --HEAD
@@ -10,7 +11,4 @@ sh ./installer.sh ~/.cache/dein
 rm ./installer.sh
 
 echo 'Installing Neovim config...'
-if [ -d ~/.config/nvim ]; then
-  rm -r ~/.config/nvim
-fi
-ln -sf $DOTPATH/config/nvim/ ~/.config/
+/bin/bash $DOTPATH/bin/link.sh $DOTPATH/.config/nvim/ ~/.config/

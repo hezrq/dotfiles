@@ -5,3 +5,5 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH="$HOME/esp/xtensa-esp32-elf/bin:$PATH"
 
+
+export PATH="$HOME/.cargo/bin:$PATH"
