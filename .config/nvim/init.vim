@@ -64,6 +64,8 @@ set expandtab
 set splitright
 set clipboard=unnamed
 
+set guifont=JetBrains\ Mono:h8
+
 autocmd BufNewFile,BufRead *.jl set filetype=julia
 autocmd BufNewFile,BufRead *.sh set filetype=bash
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
