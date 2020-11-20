@@ -3,7 +3,7 @@ window:
 
 font:
   normal:
-    family: "JetBrains Mono"
+    family: "JetBrains Mono NerdFont"
     style: Medium
   bold:
     family: "JetBrains Mono"

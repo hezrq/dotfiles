@@ -1,18 +1,33 @@
 #!/bin/bash
 
 git_branch="$(echo $1 | awk 'NR==1 {print $3}')"
-echo $1 >~/aaa
 state=""
-case $1 in
-  *modified:* ) state+="!" ;;
-  *Untracked* ) state+="?" ;;
-  *deleted* ) state+="✘" ;;
-  *new\ file* ) state+="+" ;;
-  *ahead* ) state+="⇡" ;;
-  *behind* ) state+="⇣" ;;
-  *diverged* ) state+="⇕" ;;
-  *conflicts* ) state+="=" ;;
-esac
+
+if echo $1 | grep modified: > /dev/null 2>&1; then
+  state+="!"
+fi
+if echo $1 | grep Untracked > /dev/null 2>&1; then
+  state+="?"
+fi
+if echo $1 | grep deleted > /dev/null 2>&1; then
+  state+="✘"
+fi
+if echo $1 | grep new\ file > /dev/null 2>&1; then
+  state+="+"
+fi
+if echo $1 | grep ahead > /dev/null 2>&1; then
+  state+="⇡"
+fi
+if echo $1 | grep behind > /dev/null 2>&1; then
+  state+="⇣"
+fi
+if echo $1 | grep diverged > /dev/null 2>&1; then
+  state+="⇕"
+fi
+if echo $1 | grep conflicts > /dev/null 2>&1; then
+  state+="="
+fi
+
 git_info="$git_branch $state"
 
 echo $git_info

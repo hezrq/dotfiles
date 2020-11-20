@@ -33,6 +33,8 @@ bindkey -v
 # Change default editor to Neovim
 export EDITOR=nvim
 
+is_i3=$(uname -a | grep arch)
+
 function ghq-fzf() {
   local src=$(ghq list | fzf)
   if [ -n "$src" ]; then
@@ -50,7 +52,7 @@ eval "$(anyenv init -)"
 
 autoload bashcompinit
 bashcompinit
-source /home/hezrq/.linuxbrew/etc/bash_completion.d
+source $HOME/.linuxbrew/etc/bash_completion.d
 
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 
@@ -92,8 +94,10 @@ zinit ice wait'!0'; zinit light zdharma/fast-syntax-highlighting
 zinit ice wait'!0'; zinit light zdharma/history-search-multi-word
 zinit ice wait'!0'; zinit light rupa/z
 
-if [ -z $TMUX ]; then
-  tmuximum
+if [ ! $is_i3 ]; then
+  if [ -z $TMUX ]; then
+    tmuximum
+  fi
 fi
 
 function precmd() {
@@ -103,16 +107,22 @@ function precmd() {
     PROMPT=$default_prompt
     tmux refresh-client -S
   else
-    declare -a git_status_raw=($(git-status-conv))
-    git_branch=${git_status_raw[1]}
-    git_state=${git_status_raw[2]}
-    if [ -n "$git_branch" ]; then
-      git_info="%F{blue} ${git_branch}%f %F{red}${git_state}%f"
-    else
-      git_info=""
-    fi
-    PROMPT="""
+    if ls .git/ > /dev/null 2>&1; then
+      declare -a git_status_raw=($(git-status-conv "$(git status)"))
+      git_branch=${git_status_raw[1]}
+      git_state=${git_status_raw[2]}
+      if [ -n "$git_branch" ]; then
+        git_info="%F{blue} ${git_branch}%f %F{red}${git_state}%f"
+      else
+        git_info=""
+      fi
+      PROMPT="""
 $dir $git_info
 $default_prompt"""
+    else
+      PROMPT="""
+$dir
+$default_prompt"""
+    fi
   fi
 }

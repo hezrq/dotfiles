@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo npm -g commitizen cz-conventional-changelog
+sudo npm i -g commitizen cz-conventional-changelog
