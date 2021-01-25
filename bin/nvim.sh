@@ -1,8 +1,7 @@
 #!/bin/bash
 DOTPATH=~/dotfiles
 
-echo 'Installing Neovim...'
-brew install nvim --HEAD
+echo 'Installing pynvim...'
 pip3 install pynvim
 
 echo 'Installing dein...'

@@ -167,7 +167,7 @@ mode "resize" {
   bindsym Down resize grow height 10 px or 10 ppt
   bindsym Up resize shrink height 10 px or 10 ppt
   bindsym Right resize grow width 10 px or 10 ppt
-# back to normal: Enter or Escape or $mod+r
+  # back to normal: Enter or Escape or $mod+r
   bindsym Return mode "default"
   bindsym Escape mode "default"
   bindsym $mod+r mode "default"
@@ -185,9 +185,21 @@ for_window [class=".*"] border pixel 0
 smart_gaps on
 gaps inner 20
 
+input type:touchpad {
+  pointer_accel 0.4
+  tap enabled
+  natural_scroll enabled
+}
+
+input type:keyboard {
+  xkb_options ctrl:nocaps
+  xkb_layout "jp,br"
+  xkb_model "jp106"
+}
+
 bar {
   font pango:JetBrains Mono Nerd Font 8
- position bottom
+  position bottom
   status_command i3status-rs ~/.config/i3/status.toml
   colors {
     separator #666666

@@ -4,10 +4,6 @@ DOTPATH=~/dotfiles
 
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 
-echo 'Installing zsh...'
-
-brew install zsh
-
 echo 'Installing zinit...'
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
