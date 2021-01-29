@@ -1,14 +1,13 @@
 #!/bin/bash
 DOTPATH=~/dotfiles
-DOTURL=https://github.com/norozic/dotfiles.git
+DOTURL=https://github.com/hezrq/dotfiles
 
+pacman -Syyu --noconfirm
 if type "sudo" > /dev/null 2>&1; then
   :
 else
-  pacman -Sy --noconfirm
   pacman -S sudo --noconfirm
 fi
-sudo pacman -Sy --noconfirm
 sudo pacman -S asdf --noconfirm
 sudo pacman -S clang --noconfirm
 sudo pacman -S curl --noconfirm
@@ -45,14 +44,11 @@ cd $DOTPATH
 if [ ! -d $HOME/.config/ ]; then
   mkdir $HOME/.config
 fi
-/bin/bash ./bin/homebrew.sh
+
 /bin/bash ./bin/zsh.sh
 /bin/bash ./bin/nvim.sh
 /bin/bash ./bin/deno.sh
 /bin/bash ./bin/rust.sh
 /bin/bash ./bin/git.sh
-/bin/bash ./bin/alacritty.sh
-/bin/bash ./bin/i3.sh
 /bin/bash ./bin/git-credential-helper.sh
 /bin/bash ./bin/tig.sh
-
