@@ -36,6 +36,7 @@ source ~/.config/nvim/plugins/lightline.rc.vim
 source ~/.config/nvim/plugins/fzf.rc.vim
 source ~/.config/nvim/plugins/vim-lsp-settings.rc.vim
 source ~/.config/nvim/plugins/vim-lsp.rc.vim
+source ~/.config/nvim/plugins/csv.rc.vim
 source ~/.config/nvim/plugins/vim-json.rc.vim
 
 " load theme
@@ -63,8 +64,6 @@ map <Space> <Leader>
 
 set number
 
-set ambiwidth=double
-
 set updatetime=100
 
 set scrolloff=10
@@ -77,7 +76,21 @@ set splitright
 set clipboard=unnamed
 
 set guifont=JetBrains\ Mono:h8
-
+if executable('rust-analyzer')
+  au User lsp_setup call lsp#register_server({
+        \   'name': 'Rust Language Server',
+        \   'cmd': {server_info->['rust-analyzer']},
+        \   'whitelist': ['rust'],
+        \   'initialization_options': {
+        \     'cargo': {
+        \       'loadOutDirsFromCheck': v:true,
+        \     },
+        \     'procMacro': {
+        \       'enable': v:true,
+        \     },
+        \   },
+        \ })
+endif
 autocmd BufNewFile,BufRead *.jl set filetype=julia
 autocmd BufNewFile,BufRead *.sh set filetype=bash
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx

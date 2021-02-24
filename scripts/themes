@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ ! -e "$HOME/.cache/themes-venv" ]; then
+  echo "venv is not found"
+  python -m venv $HOME/.cache/themes-venv
+  $HOME/.cache/themes-venv/bin/pip install --upgrade pip
+  $HOME/.cache/themes-venv/bin/pip install toml
+fi
+
+$HOME/.cache/themes-venv/bin/python $DOTPATH/scripts/.py-scripts/themes.py
+

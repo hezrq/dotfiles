@@ -3,7 +3,7 @@ DOTPATH=~/dotfiles
 ## Deno
 DENO_INSTALL=$HOME/.deno
 
-## Pipenv export PIPENV_VENV_IN_PROJECT=1 # Cargo
+# Cargo
 if [ -f $HOME/.cargo/env ]; then
   source $HOME/.cargo/env
 fi
@@ -26,6 +26,8 @@ alias ls="exa"
 alias vi="nvim"
 alias g="git"
 alias t="tmuximum"
+alias rustcheck="cargo clippy -- -W clippy::all && cargo fmt --all -- --check"
+alias diff="colordiff"
 
 # Use vim keybind
 bindkey -v
@@ -47,8 +49,8 @@ function ghq-fzf() {
 zle -N ghq-fzf
 bindkey '^g' ghq-fzf
 
-# anyenv
-eval "$(anyenv init -)"
+# direnv
+eval "$(direnv hook zsh)"
 
 autoload bashcompinit
 bashcompinit

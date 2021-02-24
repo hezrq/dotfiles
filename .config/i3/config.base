@@ -1,5 +1,6 @@
 exec --no-startup-id dunst
 exec --no-startup-id fcitx
+exec --no-startup-id $HOME/.config/mkconfig.sh
 
 set $mod Mod4
 
@@ -141,6 +142,7 @@ bar {
   position bottom
   status_command i3status-rs
   colors {
+    background #161821
     separator #666666
     statusline #dddddd
     focused_workspace #0088CC #0088CC #ffffff
