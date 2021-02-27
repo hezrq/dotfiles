@@ -5,7 +5,6 @@ DOTURL=https://github.com/hezrq/dotfiles
 yay -Syyu --noconfirm
 yay -S asdf --noconfirm
 yay -S clang --noconfirm
-yay -S colordiff --noconfirm
 yay -S curl --noconfirm
 yay -S direnv --noconfirm
 yay -S doas --noconfirm

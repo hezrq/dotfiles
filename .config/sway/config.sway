@@ -1,4 +1,5 @@
-bindsym $mod+Shift+r exec "$HOME/.config/mkconfig.sh && swaymsg restart"
+bindsym $mod+Shift+r exec "$HOME/.config/mkconfig.sh && swaymsg reload"
+bindsym $mod+Shift+s exec grim -g "$(slurp -d)" - | wl-copy
 
 input type:touchpad {
   pointer_accel 0.4

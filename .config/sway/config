@@ -1,7 +1,6 @@
 exec --no-startup-id dunst
 exec --no-startup-id fcitx
-exec --no-startup-id picom
-exec --no-startup-id "hsetroot -solid #161821"
+exec --no-startup-id $HOME/.config/mkconfig.sh
 
 set $mod Mod4
 
@@ -155,7 +154,8 @@ bar {
 
 bindsym $mod+Left workspace prev
 bindsym $mod+Right workspace next
-bindsym $mod+Shift+r exec "$HOME/.config/mkconfig.sh && swaymsg restart"
+bindsym $mod+Shift+r exec "$HOME/.config/mkconfig.sh && swaymsg reload"
+bindsym $mod+Shift+s exec grim -g "$(slurp -d)" - | wl-copy
 
 input type:touchpad {
   pointer_accel 0.4

@@ -27,7 +27,7 @@ alias vi="nvim"
 alias g="git"
 alias t="tmuximum"
 alias rustcheck="cargo clippy -- -W clippy::all && cargo fmt --all -- --check"
-alias diff="colordiff"
+alias keylightoff="echo 0 | doas tee /sys/class/leds/dell::kbd_backlight/brightness"
 
 # Use vim keybind
 bindkey -v
@@ -54,9 +54,6 @@ eval "$(direnv hook zsh)"
 
 autoload bashcompinit
 bashcompinit
-source $HOME/.linuxbrew/etc/bash_completion.d
-
-fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 
 autoload -U compinit
 compinit -u
