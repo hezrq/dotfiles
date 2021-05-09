@@ -1,3 +1,8 @@
 #!/bin/bash
 
+DOTPATH=~/dotfiles
 
+paru -Syyu
+cd $DOTPATH && git pull
+./bin/deploy.sh
+cd - > /dev/null

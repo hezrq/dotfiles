@@ -1,5 +1,5 @@
-aug CSV_Editing
+vim.cmd([[aug CSV_Editing
   au!
   au BufRead,BufWritePost *.csv :%ArrangeColumn
   au BufWritePre *.csv :%UnArrangeColumn
-aug end
+aug end]])

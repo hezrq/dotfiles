@@ -3,13 +3,13 @@ window:
 
 font:
   normal:
-    family: "JetBrains Mono NerdFont"
+    family: "JetBrains Mono NF"
     style: Medium
   bold:
-    family: "JetBrains Mono NerdFont"
+    family: "JetBrains Mono NF"
     style: Bold
   italic:
-    family: "JetBrains Mono NerdFont"
+    family: "JetBrains Mono NF"
     style: Italic
   size: 11
 

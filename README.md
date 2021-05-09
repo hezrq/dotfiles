@@ -1,11 +1,13 @@
 # dotfiles
 My dotfiles
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Gitmoji](https://img.shields.io/badge/gitmoji-%20%F0%9F%98%9C%20%F0%9F%98%8D-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me)
-![CI](https://github.com/norozic/dotfiles/workflows/CI/badge.svg)
+[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-yellow.svg)](https://wtfpl.net/)
 
-# Usage ✏️
-```bash -c "$(curl -fsSL https://raw.githubusercontent.com/norozic/dotfiles/master/bin/install.sh)"```
+# Usage
+```
+# curl
+curl -L https://raw.githubusercontent.com/shiychi/dotfiles/master/bin/install.sh | bash
 
-```bash -c "$(wget -qO - https://raw.githubusercontent.com/norozic/dotfiles/master/bin/install.sh)"```
+# wget
+wget -qO - https://raw.githubusercontent.com/shiychi/dotfiles/master/bin/install.sh | bash
+```

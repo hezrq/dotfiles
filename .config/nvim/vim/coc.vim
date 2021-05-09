@@ -1,8 +1,6 @@
-let g:coc_global_extensions = [
-          \ 'coc-rust-analyzer',
-          \ 'coc-json',
-          \ 'coc-yaml'
-          \ ]
+" Set internal encoding of vim, not needed on neovim, since coc.nvim using some
+" unicode characters in the file autoload/float.vim
+set encoding=utf-8
 
 " TextEdit might fail if hidden is not set.
 set hidden

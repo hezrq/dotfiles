@@ -3,4 +3,3 @@ let g:lightline = {
   \ }
 
 let s:p = g:lightline#colorscheme#iceberg#palette
-
