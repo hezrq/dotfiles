@@ -1,3 +1,5 @@
 .config/zsh/.zcompdump*
 .config/zsh/.zinit/
 .config/nvim/.netrwhist
+.config/sway/config
+.config/i3/config
